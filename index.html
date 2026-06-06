@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slayde Sequeira — Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">~/slayde</a>
+      <div class="nav-links">
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+      </div>
+      <div class="nav-socials">
+        <a href="https://github.com/SlaydeSequworeirra" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+      <div class="nav-mobile-socials">
+        <a href="https://github.com/SlaydeSequeira" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="terminal-window hero-terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">main.ts — ~/slayde</span>
+      </div>
+      <div class="terminal-body">
+        <p class="code-comment">// while(alive) { code(); }</p>
+        <p class="code-line"><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</p>
+        <p class="code-line indent"><span class="code-key">name</span>: <span class="code-string">"Slayde Sequeira"</span>,</p>
+        <p class="code-line indent"><span class="code-key">role</span>: <span class="code-string">"Software Engineer"</span>,</p>
+        <p class="code-line indent"><span class="code-key">location</span>: <span class="code-string">"Bengaluru, India"</span>,</p>
+        <p class="code-line indent"><span class="code-key">status</span>: <span class="code-string">"<span class="blink">●</span> Online"</span>,</p>
+        <p class="code-line">};</p>
+        <br />
+        <p class="hero-tagline" id="typed-text"></p>
+        <span class="cursor" id="cursor">█</span>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">1.5+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">6+</span>
+        <span class="stat-label">Projects Shipped</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">6</span>
+        <span class="stat-label">Hackathon Wins</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1</span>
+        <span class="stat-label">IEEE Publication</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <h2 class="section-header"><span class="prompt">$</span> cat about.md</h2>
+    <div class="terminal-window">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">about.md</span>
+      </div>
+      <div class="terminal-body about-grid">
+        <div class="about-info">
+          <div class="about-field">
+            <span class="field-label">OPERATOR</span>
+            <span class="field-value">Slayde Sequeira</span>
+          </div>
+          <div class="about-field">
+            <span class="field-label">ROLE</span>
+            <span class="field-value">SDE-1 @ HyperVerge</span>
+          </div>
+          <div class="about-field">
+            <span class="field-label">LOCATION</span>
+            <span class="field-value">Bengaluru, India</span>
+          </div>
+          <div class="about-field">
+            <span class="field-label">EDUCATION</span>
+            <span class="field-value">B.E. Computer Engineering (Honors in Data Science)</span>
+          </div>
+          <div class="about-field">
+            <span class="field-label">UNIVERSITY</span>
+            <span class="field-value">Fr. CRCE, Mumbai — CGPA 8.99</span>
+          </div>
+          <div class="about-field">
+            <span class="field-label">STATUS</span>
+            <span class="field-value status-online"><span class="blink">●</span> Online</span>
+          </div>
+        </div>
+        <div class="about-mission">
+          <p class="code-comment">/* mission.log */</p>
+          <p>Software engineer who builds things that scale. Currently designing distributed backend services and AI-powered platforms at HyperVerge. I care about clean architecture, resilient systems, and shipping products that real users depend on.</p>
+          <p style="margin-top: 0.8rem;">From deploying microservices processing 100k+ events/month to launching a mobile app with 20k+ downloads — I like working across the stack and turning ideas into production-grade software.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <h2 class="section-header"><span class="prompt">$</span> git log --experience</h2>
+
+    <div class="timeline">
+      <!-- HyperVerge -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">experience/hyperverge.log</span>
+          </div>
+          <div class="terminal-body">
+            <div class="commit-header">
+              <span class="commit-hash">commit</span>
+              <span class="commit-date">Jan 2025 — Present</span>
+            </div>
+            <p class="commit-author">Author: Slayde Sequeira</p>
+            <h3 class="commit-title">SDE-1 <span class="commit-company">@ HyperVerge</span> <span class="commit-location">— Bengaluru</span></h3>
+            <div class="commit-diff">
+              <p class="diff-add">+ Designed config-driven usage analytics microservice using Node.js & AWS RDS — p95 &lt;78ms at 120 req/s, processing 100k+ events/month</p>
+              <p class="diff-add">+ Building features for AI-powered Contract Lifecycle Management (CLM) platform using the MERN stack</p>
+              <p class="diff-add">+ Implemented distributed backend services with AWS (EC2, S3, SQS) for event-driven contract pipelines</p>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">React</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">AWS</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">SQS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Svirtz -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">experience/svirtz.log</span>
+          </div>
+          <div class="terminal-body">
+            <div class="commit-header">
+              <span class="commit-hash">commit</span>
+              <span class="commit-date">Oct 2023 — Jun 2024</span>
+            </div>
+            <p class="commit-author">Author: Slayde Sequeira</p>
+            <h3 class="commit-title">Web & App Developer Intern <span class="commit-company">@ Svirtz Technologies</span> <span class="commit-location">— Remote</span></h3>
+            <div class="commit-diff">
+              <p class="diff-add">+ Built native Android app with video conferencing and enterprise web interoperability</p>
+              <p class="diff-add">+ Optimized network requests, caching & UI rendering — reduced load times by 30%</p>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Android</span>
+              <span class="tag">Java</span>
+              <span class="tag">WebRTC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DigiHelic -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">experience/digihelic.log</span>
+          </div>
+          <div class="terminal-body">
+            <div class="commit-header">
+              <span class="commit-hash">commit</span>
+              <span class="commit-date">Dec 2023 — Mar 2024</span>
+            </div>
+            <p class="commit-author">Author: Slayde Sequeira</p>
+            <h3 class="commit-title">Web Developer Intern <span class="commit-company">@ DigiHelic Solutions</span> <span class="commit-location">— Remote</span></h3>
+            <div class="commit-diff">
+              <p class="diff-add">+ Developed full-stack immigration management platform with real-time status tracking</p>
+              <p class="diff-add">+ Built scalable features using Next.js, Node.js & MongoDB with secure APIs</p>
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <h2 class="section-header"><span class="prompt">$</span> ls -la ~/projects</h2>
+    <p class="section-sub">pinned repositories</p>
+
+    <div class="projects-grid">
+      <!-- Console Gaming App -->
+      <div class="project-card terminal-window">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">console-gaming-app/</span>
+        </div>
+        <div class="terminal-body">
+          <h3 class="project-name">Console Gaming App</h3>
+          <p class="project-desc">Production-grade Flutter app for a console gaming lounge franchise with 11+ store locations. Supports tournaments, rewards, payments, and multi-store user segmentation.</p>
+          <div class="project-stats">
+            <span class="project-stat">⬇ 20k+ downloads</span>
+            <span class="project-stat">📱 iOS & Android</span>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="https://play.google.com/store" target="_blank" class="project-link">Play Store ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smart Bin+ -->
+      <div class="project-card terminal-window">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">smart-bin-plus/</span>
+        </div>
+        <div class="terminal-body">
+          <h3 class="project-name">Smart Bin+</h3>
+          <p class="project-desc">IoT-enabled smart waste management system using ML-based image classification for real-time waste segregation. Published in IEEE XPLORE.</p>
+          <div class="project-stats">
+            <span class="project-stat">📄 IEEE Published</span>
+            <span class="project-stat">🏆 Research Paper</span>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">AWS</span>
+            <span class="tag">IoT Core</span>
+            <span class="tag">ML</span>
+            <span class="tag">Android</span>
+          </div>
+          <div class="project-links">
+            <a href="YOUR-IEEE-PAPER-LINK" target="_blank" class="project-link">IEEE Paper ↗</a>
+            <a href="YOUR-GITHUB-REPO-LINK" target="_blank" class="project-link">Source ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLM Platform -->
+      <div class="project-card terminal-window">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">clm-platform/</span>
+        </div>
+        <div class="terminal-body">
+          <h3 class="project-name">CLM Platform</h3>
+          <p class="project-desc">AI-powered Contract Lifecycle Management platform enabling automated contract workflows, real-time collaboration, and distributed document processing pipelines.</p>
+          <div class="project-stats">
+            <span class="project-stat">🏢 Production @ HyperVerge</span>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">AWS</span>
+            <span class="tag">SQS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Usage Analytics -->
+      <div class="project-card terminal-window">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">usage-analytics/</span>
+        </div>
+        <div class="terminal-body">
+          <h3 class="project-name">Usage Analytics Microservice</h3>
+          <p class="project-desc">Config-driven analytics microservice supporting flexible time-based analytics and user activity metrics for 1k+ active users. Processes 100k+ events/month.</p>
+          <div class="project-stats">
+            <span class="project-stat">⚡ p95 &lt;78ms</span>
+            <span class="project-stat">📊 120 req/s</span>
+          </div>
+          <div class="tech-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">AWS RDS</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <h2 class="section-header"><span class="prompt">$</span> cat skills.json</h2>
+    <div class="terminal-window">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">skills.json</span>
+      </div>
+      <div class="terminal-body skills-body">
+        <div class="skill-group">
+          <p class="skill-category">"frontend":</p>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Android</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-category">"backend":</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Express</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-category">"databases":</p>
+          <div class="skill-tags">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-category">"cloud & devops":</p>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS EC2</span>
+            <span class="skill-tag">AWS S3</span>
+            <span class="skill-tag">AWS SQS</span>
+            <span class="skill-tag">AWS RDS</span>
+            <span class="skill-tag">AWS IoT Core</span>
+            <span class="skill-tag">Firebase</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-category">"tools":</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section class="section" id="achievements">
+    <h2 class="section-header"><span class="prompt">$</span> cat achievements.log</h2>
+    <div class="achievements-grid">
+      <div class="achievement-card">
+        <span class="achievement-icon">🏆</span>
+        <span class="achievement-text">Winner — SunHacks'24 Intl. Hackathon</span>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">🏆</span>
+        <span class="achievement-text">Winner — S.P.I.T Hacks 2025</span>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">🏆</span>
+        <span class="achievement-text">Winner — Ingenium 2.0 Hackathon</span>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">🥉</span>
+        <span class="achievement-text">3rd Place — Algoholics 2.0 Hackathon</span>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">🥈</span>
+        <span class="achievement-text">Runner Up — Techvista Coding Contest</span>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">🥈</span>
+        <span class="achievement-text">Runner Up — HyperVerge Astral Cup</span>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">📄</span>
+        <span class="achievement-text">Lead Author — IEEE XPLORE Publication</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <h2 class="section-header"><span class="prompt">$</span> ./contact.sh</h2>
+    <div class="terminal-window">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">contact.sh — secure connection</span>
+      </div>
+      <div class="terminal-body contact-body">
+        <p class="code-comment">// Establishing secure connection...</p>
+        <p class="code-comment">// Connection established. Send a message.</p>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label class="form-label">name<span class="form-required">*</span></label>
+            <input type="text" class="form-input" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">email<span class="form-required">*</span></label>
+            <input type="email" class="form-input" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">subject</label>
+            <input type="text" class="form-input" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">message<span class="form-required">*</span></label>
+            <textarea class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <span>$ send_message</span>
+          </button>
+        </form>
+        <div class="contact-alt">
+          <p class="code-comment">// Or reach out directly:</p>
+          <div class="contact-links">
+            <a href="mailto:slaydes13@gmail.com" class="contact-link">📧 slaydes13@gmail.com</a>
+            <a href="tel:+918097276899" class="contact-link">📱 +91 8097276899</a>
+            <a href="https://github.com/SlaydeSequeira" target="_blank" class="contact-link">🔗 GitHub</a>
+            <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="contact-link">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text">Built with <span class="footer-tech">HTML</span>, <span class="footer-tech">CSS</span> & <span class="footer-tech">JS</span></p>
+      <p class="footer-copy">&copy; 2025 Slayde Sequeira. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
