@@ -52,6 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Theme toggle (day = light mode, night = dark mode) ──
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    const shell = themeToggle.querySelector('.dnt-shell');
+    const root = document.documentElement;
+
+    const setTheme = (light) => {
+      root.classList.toggle('light', light);
+      if (shell) shell.classList.toggle('night', !light);
+      themeToggle.setAttribute('aria-pressed', String(light));
+      themeToggle.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+    };
+
+    // Always start in dark mode; light only applies when the user toggles.
+    setTheme(false);
+
+    themeToggle.addEventListener('click', () => {
+      setTheme(!root.classList.contains('light'));
+    });
+  }
+
   // ── Nav state + scroll progress + active link (single scroll handler) ──
   const nav = document.getElementById('nav');
   const progress = document.getElementById('scroll-progress');
