@@ -58,18 +58,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const shell = themeToggle.querySelector('.dnt-shell');
     const root = document.documentElement;
 
-    const setTheme = (light) => {
+    const setTheme = (light, persist) => {
       root.classList.toggle('light', light);
       if (shell) shell.classList.toggle('night', !light);
       themeToggle.setAttribute('aria-pressed', String(light));
       themeToggle.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+      if (persist) {
+        try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch (e) {}
+      }
     };
 
-    // Always start in dark mode; light only applies when the user toggles.
-    setTheme(false);
+    // Sync the toggle UI to the theme already applied by the inline head script
+    // (which reads localStorage / the OS preference before first paint).
+    setTheme(root.classList.contains('light'), false);
 
     themeToggle.addEventListener('click', () => {
-      setTheme(!root.classList.contains('light'));
+      setTheme(!root.classList.contains('light'), true);
+    });
+
+    // Follow OS theme changes unless the user has chosen explicitly.
+    const themeMq = window.matchMedia('(prefers-color-scheme: light)');
+    themeMq.addEventListener('change', (e) => {
+      try { if (localStorage.getItem('theme')) return; } catch (err) {}
+      setTheme(e.matches, false);
     });
   }
 
@@ -136,18 +147,38 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach((el) => observer.observe(el));
   }
 
-  // ── Contact form (placeholder handler) ──
+  // ── Contact form → FormSubmit (AJAX, keeps user on the page) ──
   const form = document.getElementById('contact-form');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn = form.querySelector('.form-submit span');
-    const original = btn.textContent;
-    btn.textContent = '✓ message_sent';
-    btn.parentElement.style.background = 'var(--green)';
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.parentElement.style.background = '';
+    const submitBtn = form.querySelector('.form-submit');
+    const label = submitBtn.querySelector('span');
+    const original = label.textContent;
+
+    label.textContent = '... sending';
+    submitBtn.disabled = true;
+    submitBtn.style.background = '';
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/slaydes13@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      if (!res.ok) throw new Error('Request failed: ' + res.status);
+
+      label.textContent = '✓ message_sent';
+      submitBtn.style.background = 'var(--green)';
       form.reset();
-    }, 3000);
+    } catch (err) {
+      label.textContent = '✗ failed — email me directly';
+      submitBtn.style.background = 'var(--red)';
+    } finally {
+      setTimeout(() => {
+        label.textContent = original;
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+      }, 3500);
+    }
   });
 });

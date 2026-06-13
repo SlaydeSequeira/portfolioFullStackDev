@@ -3,13 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Slayde Sequeira — Software Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Software Engineer (SDE-1 @ HyperVerge) building distributed backend services & AI platforms. 6× hackathon winner · IEEE-published · 20k+ app downloads." />
+  <meta name="author" content="Slayde Sequeira" />
+  <meta name="keywords" content="Slayde Sequeira, Software Engineer, Backend Developer, Full Stack, Node.js, React, AWS, MongoDB, HyperVerge, Bengaluru" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://slaydesequeira.github.io/portfolioFullStackDev/" />
+
+  <!-- Theme color (matches dark/light backgrounds) -->
+  <meta name="theme-color" content="#07070b" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)" />
+
+  <!-- Open Graph (LinkedIn, Facebook, WhatsApp, Slack) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Slayde Sequeira" />
+  <meta property="og:title" content="Slayde Sequeira — Software Engineer" />
+  <meta property="og:description" content="Building distributed backend services & AI platforms. 6× hackathon winner · IEEE-published · 20k+ app downloads." />
+  <meta property="og:url" content="https://slaydesequeira.github.io/portfolioFullStackDev/" />
+  <meta property="og:image" content="https://slaydesequeira.github.io/portfolioFullStackDev/og-image.svg" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Slayde Sequeira — Software Engineer" />
+  <meta name="twitter:description" content="Building distributed backend services & AI platforms. 6× hackathon winner · IEEE-published · 20k+ app downloads." />
+  <meta name="twitter:image" content="https://slaydesequeira.github.io/portfolioFullStackDev/og-image.svg" />
+
+  <!-- Favicon (inline terminal-prompt glyph, matches site accent) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2307070b'/%3E%3Cpath d='M28 34 L44 50 L28 66' fill='none' stroke='%2300e5a0' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='52' y='58' width='22' height='8' rx='3' fill='%2300e5a0'/%3E%3C/svg%3E" />
+
+  <!-- Apply saved/system theme before paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (stored ? stored === 'light' : prefersLight) {
+          document.documentElement.classList.add('light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Slayde Sequeira",
+    "jobTitle": "Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "HyperVerge" },
+    "url": "https://slaydesequeira.github.io/portfolioFullStackDev/",
+    "email": "mailto:slaydes13@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "India" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Fr. Conceicao Rodrigues College of Engineering, Mumbai" },
+    "sameAs": [
+      "https://github.com/SlaydeSequeira",
+      "https://linkedin.com/in/slayde-sequeira-062660221"
+    ],
+    "knowsAbout": ["Node.js", "React", "MongoDB", "PostgreSQL", "AWS", "TypeScript", "Distributed Systems"]
+  }
+  </script>
 </head>
 <body>
+  <a href="#home" class="skip-link">Skip to content</a>
+
   <!-- Ambient background layers -->
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
@@ -596,22 +660,28 @@
       <div class="terminal-body contact-body">
         <p class="code-comment">// Establishing secure connection...</p>
         <p class="code-comment">// Connection established. Send a message.</p>
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/slaydes13@gmail.com" method="POST">
+          <!-- FormSubmit directives (also used as fallback if JS is disabled) -->
+          <input type="hidden" name="_subject" value="New message from your portfolio 🚀" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Honeypot: bots fill this, real users never see it -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
           <div class="form-group">
-            <label class="form-label">name<span class="form-required">*</span></label>
-            <input type="text" class="form-input" placeholder="Your name" required />
+            <label class="form-label" for="cf-name">name<span class="form-required">*</span></label>
+            <input id="cf-name" name="name" type="text" class="form-input" placeholder="Your name" required />
           </div>
           <div class="form-group">
-            <label class="form-label">email<span class="form-required">*</span></label>
-            <input type="email" class="form-input" placeholder="you@example.com" required />
+            <label class="form-label" for="cf-email">email<span class="form-required">*</span></label>
+            <input id="cf-email" name="email" type="email" class="form-input" placeholder="you@example.com" required />
           </div>
           <div class="form-group">
-            <label class="form-label">subject</label>
-            <input type="text" class="form-input" placeholder="What's this about?" />
+            <label class="form-label" for="cf-subject">subject</label>
+            <input id="cf-subject" name="subject" type="text" class="form-input" placeholder="What's this about?" />
           </div>
           <div class="form-group">
-            <label class="form-label">message<span class="form-required">*</span></label>
-            <textarea class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
+            <label class="form-label" for="cf-message">message<span class="form-required">*</span></label>
+            <textarea id="cf-message" name="message" class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
           </div>
           <button type="submit" class="form-submit">
             <span>$ send_message</span>

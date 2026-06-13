@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="'JetBrains Mono', ui-monospace, monospace">
+  <defs>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00e5a0"/>
+      <stop offset="1" stop-color="#7c5cfc"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00e5a0" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#00e5a0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7c5cfc" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#7c5cfc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#07070b"/>
+  <ellipse cx="180" cy="80" rx="520" ry="420" fill="url(#glowA)"/>
+  <ellipse cx="1080" cy="560" rx="560" ry="440" fill="url(#glowB)"/>
+
+  <!-- Terminal window -->
+  <rect x="120" y="120" width="960" height="390" rx="18" fill="#0f0f17" stroke="#1c1c2b" stroke-width="1.5"/>
+  <!-- Title bar -->
+  <rect x="120" y="120" width="960" height="52" rx="18" fill="#0a0a12"/>
+  <rect x="120" y="150" width="960" height="22" fill="#0a0a12"/>
+  <circle cx="152" cy="146" r="7" fill="#ff6b6b"/>
+  <circle cx="178" cy="146" r="7" fill="#ffd93d"/>
+  <circle cx="204" cy="146" r="7" fill="#00e5a0"/>
+  <text x="240" y="151" font-size="17" fill="#6e7681">main.ts — ~/slayde</text>
+
+  <!-- Body -->
+  <text x="168" y="232" font-size="20" fill="#4a5568" font-style="italic">// while(alive) { code(); }</text>
+  <text x="168" y="320" font-size="68" font-weight="700" fill="url(#name)">Slayde Sequeira</text>
+  <text x="168" y="372" font-size="28" fill="#c9d1d9">Software Engineer · SDE-1 @ HyperVerge</text>
+  <text x="168" y="430" font-size="22" fill="#00e5a0">$ building systems that scale<tspan fill="#00e5a0" font-weight="700">█</tspan></text>
+
+  <!-- Tags -->
+  <g font-size="18" fill="#00e5a0">
+    <rect x="168" y="452" width="96" height="34" rx="17" fill="#00e5a01f"/>
+    <text x="216" y="475" text-anchor="middle">Node.js</text>
+    <rect x="276" y="452" width="78" height="34" rx="17" fill="#00e5a01f"/>
+    <text x="315" y="475" text-anchor="middle">React</text>
+    <rect x="366" y="452" width="64" height="34" rx="17" fill="#00e5a01f"/>
+    <text x="398" y="475" text-anchor="middle">AWS</text>
+    <rect x="442" y="452" width="118" height="34" rx="17" fill="#00e5a01f"/>
+    <text x="501" y="475" text-anchor="middle">MongoDB</text>
+  </g>
+
+  <!-- Footer line -->
+  <text x="120" y="572" font-size="19" fill="#6e7681">github.com/SlaydeSequeira&#160;&#160;·&#160;&#160;in/slayde-sequeira&#160;&#160;·&#160;&#160;6× hackathon winner&#160;&#160;·&#160;&#160;IEEE-published</text>
+</svg>
